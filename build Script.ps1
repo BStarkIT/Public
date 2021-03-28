@@ -1,5 +1,5 @@
 ﻿# Install all AR Fonts
-Write-Host "Installing Fonts"
+Write-Host "Copying files"
 $FONTS = 0x14
 $Path="c:\fonts"
 $objShell = New-Object -ComObject Shell.Application
