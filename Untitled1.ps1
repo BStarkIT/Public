@@ -1,0 +1,1 @@
+﻿Get-Childitem . -recurse -include *.mp4 | move-item -dest G:\Input

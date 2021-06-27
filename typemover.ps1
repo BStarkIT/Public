@@ -1,0 +1,1 @@
+﻿Get-ChildItem -Path F:\ -Recurse -Filter *.mp4 | Move-Item -Destination G:\Input
