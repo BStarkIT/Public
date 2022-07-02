@@ -1,0 +1,12 @@
+wusa /uninstall /kb:5005698
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Printers\PointAndPrint]
+"RestrictDriverInstallationToAdministrators"=dword:00000000
+
+The recent CU on the server required me to make this registry change on the print server side:
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print]
+"RpcAuthnLevelPrivacyEnabled"=dword:00000000
+Then restart print spooler on server.
+
+KB4522016 
+KB4524147
