@@ -1,4 +1,4 @@
-﻿$List = gwmi win32_diskdrive | ? { $_.interfacetype -eq "USB" } | % { gwmi -Query "ASSOCIATORS OF {Win32_DiskDrive.DeviceID=`"$($_.DeviceID.replace('\','\\'))`"} WHERE AssocClass = Win32_DiskDriveToDiskPartition" } | % { gwmi -Query "ASSOCIATORS OF {Win32_DiskPartition.DeviceID=`"$($_.DeviceID)`"} WHERE AssocClass = Win32_LogicalDiskToPartition" } | % { $_.deviceid }
+﻿$List = gwmi win32_diskdrive | Where-Object { $_.interfacetype -eq "USB" } | ForEach-Object { gwmi -Query "ASSOCIATORS OF {Win32_DiskDrive.DeviceID=`"$($_.DeviceID.replace('\','\\'))`"} WHERE AssocClass = Win32_DiskDriveToDiskPartition" } | ForEach-Object { gwmi -Query "ASSOCIATORS OF {Win32_DiskPartition.DeviceID=`"$($_.DeviceID)`"} WHERE AssocClass = Win32_LogicalDiskToPartition" } | ForEach-Object { $_.deviceid }
 MainForm
 function Backup {
     Write-Output "backing up to $Drive"
