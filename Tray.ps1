@@ -28,9 +28,9 @@ $ToggleMenuItem1.add_Click({
 })
 $ToggleMenuItem2 = New-Object System.Windows.Forms.MenuItem
 $ToggleMenuItem2.Index = 2
-$ToggleMenuItem2.Text = "GPupdate"
+$ToggleMenuItem2.Text = "CommVault"
 $ToggleMenuItem2.add_Click({
-    Invoke-GPUpdate
+    Start-Process "C:\PS\galaxy.jnlp"
 })
 $ToggleMenuItem3 = New-Object System.Windows.Forms.MenuItem
 $ToggleMenuItem3.Index = 3
@@ -42,23 +42,41 @@ $ToggleMenuItem4 = New-Object System.Windows.Forms.MenuItem
 $ToggleMenuItem4.Index = 4
 $ToggleMenuItem4.Text = "Palo Alto"
 $ToggleMenuItem4.add_Click({
-    Start-Process "cmd.exe"  "/c D:\Storage\Code\Server\loop.bat"
+    Start-Process "cmd.exe"  "/c C:\PS\Devops\loop.bat"
 })
 $ToggleMenuItem5 = New-Object System.Windows.Forms.MenuItem
 $ToggleMenuItem5.Index = 5
 $ToggleMenuItem5.Text = "Remote"
 $ToggleMenuItem5.add_Click({
-    Start-Process MMC.exe -Verb runAs
+    Start-Process "C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\i386\CmRcViewer.exe" -Verb runAs
 })
 $ToggleMenuItem6 = New-Object System.Windows.Forms.MenuItem
 $ToggleMenuItem6.Index = 6
 $ToggleMenuItem6.Text = "AD"
 $ToggleMenuItem6.add_Click({
-    Start-Process MMC.exe -Verb runAs
+    Start-Process dsa.msc -Verb runAs
+})
+$ToggleMenuItem7 = New-Object System.Windows.Forms.MenuItem
+$ToggleMenuItem7.Index = 7
+$ToggleMenuItem7.Text = "ISE"
+$ToggleMenuItem7.add_Click({
+    Start-Process "C:\Windows\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe"
+})
+$ToggleMenuItem8 = New-Object System.Windows.Forms.MenuItem
+$ToggleMenuItem8.Index = 8
+$ToggleMenuItem8.Text = "mRemote"
+$ToggleMenuItem8.add_Click({
+    Start-Process "C:\Program Files (x86)\mRemoteNG\mRemoteNG.exe"
+})
+$ToggleMenuItem8 = New-Object System.Windows.Forms.MenuItem
+$ToggleMenuItem8.Index = 9
+$ToggleMenuItem8.Text = "SCCM"
+$ToggleMenuItem8.add_Click({
+    Start-Process "C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe" -Verb runAs
 })
 # Create an Exit Menu Item
 $ExitMenuItem = New-Object System.Windows.Forms.MenuItem
-$ExitMenuItem.Index = 7
+$ExitMenuItem.Index = 10
 $ExitMenuItem.Text = "E&xit"
 $ExitMenuItem.add_Click({
     $objForm.Close()
@@ -71,6 +89,9 @@ $objContextMenu.MenuItems.Add($ToggleMenuItem3) | Out-Null
 $objContextMenu.MenuItems.Add($ToggleMenuItem4) | Out-Null
 $objContextMenu.MenuItems.Add($ToggleMenuItem5) | Out-Null
 $objContextMenu.MenuItems.Add($ToggleMenuItem6) | Out-Null
+$objContextMenu.MenuItems.Add($ToggleMenuItem7) | Out-Null
+$objContextMenu.MenuItems.Add($ToggleMenuItem8) | Out-Null
+$objContextMenu.MenuItems.Add($ToggleMenuItem9) | Out-Null
 $objContextMenu.MenuItems.Add($ExitMenuItem) | Out-Null
 #
 # Assign the Context Menu

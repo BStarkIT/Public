@@ -1,5 +1,4 @@
 Clear-Host
-Set-Variable HOME "D:\Git"
 $env:PSModulePath = $Env:PSModulePath+";D:\git\PSModules\"
 New-Alias -Name tray -value D:\git\Public\Tray.ps1
 Set-Alias -Name np -Value "C:\Program Files\Notepad++\notepad++.exe"
