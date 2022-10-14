@@ -1,0 +1,46 @@
+{
+	"Title block for BStark Scripts": {
+		"prefix": "bstitle",
+		"body": [
+		  "<#",
+		  ".SYNOPSIS",
+		  "This PowerShell script is to fetch computer information.",
+		  "",
+		  ".NOTES",
+		  "Script written by Brian Stark of BStarkIT ",
+		  "",
+		  ".DESCRIPTION",
+		  "written by BStark",
+		  "",
+		  ".PARAMETER ComputerName",
+		  "ComputerName may be your local host or remote server name or IP address.",
+		  "",
+		  ".EXAMPLE",
+		  "PS C:\\> Get-PCinformation -ComputerName '0.0.0.0'",
+		  "    Computer Name with Serial Number",
+		  "",
+		  ".NOTES",
+		  "Script written by Brian Stark of BStarkIT ",
+		  "",
+		  ".DESCRIPTION",
+		  "written by BStark",
+		  "",
+		  ".LINK",
+		  "Scripts can be found at:",
+		  "https://github.com/BStarkIT ",
+		  "#>"
+		],
+		"description": "Title block for BStark Scripts"
+	  },
+	  "list used variables": {
+		"prefix": "bsvar",
+		"body": [
+		  "<#",
+		  "Variables used    |  Description",
+		  "$",
+		  "#>"
+		],
+		"description": "list used variables"
+	  }
+	  
+}
