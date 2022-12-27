@@ -31,16 +31,6 @@
 		  "#>"
 		],
 		"description": "Title block for BStark Scripts"
-	  },
-	  "list used variables": {
-		"prefix": "bsvar",
-		"body": [
-		  "<#",
-		  "Variables used    |  Description",
-		  "$",
-		  "#>"
-		],
-		"description": "list used variables"
 	  }
 	  
 }
