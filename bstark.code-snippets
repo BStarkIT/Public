@@ -1,36 +1,24 @@
 {
 	"Title block for BStark Scripts": {
-		"prefix": "bstitle",
+		"prefix": "SC-Title",
 		"body": [
 		  "<#",
 		  ".SYNOPSIS",
-		  "This PowerShell script is to fetch computer information.",
+		  "This PowerShell script is to ",
 		  "",
 		  ".NOTES",
-		  "Script written by Brian Stark of BStarkIT ",
+		  "Script written by Brian Stark",
+		  "Date:",
+		  "Reviewed by:",
+		  "Date:",
+		  "",
+		  "Stored in Project Repo:",
 		  "",
 		  ".DESCRIPTION",
 		  "written by BStark",
-		  "",
-		  ".PARAMETER ComputerName",
-		  "ComputerName may be your local host or remote server name or IP address.",
-		  "",
-		  ".EXAMPLE",
-		  "PS C:\\> Get-PCinformation -ComputerName '0.0.0.0'",
-		  "    Computer Name with Serial Number",
-		  "",
-		  ".NOTES",
-		  "Script written by Brian Stark of BStarkIT ",
-		  "",
-		  ".DESCRIPTION",
-		  "written by BStark",
-		  "",
-		  ".LINK",
-		  "Scripts can be found at:",
-		  "https://github.com/BStarkIT ",
 		  "#>"
 		],
-		"description": "Title block for BStark Scripts"
-	  }
+		"description": "Title block for SCTS Scripts"
+	}
 	  
 }

@@ -1,18 +1,3 @@
-  <#
- .SYNOPSIS
-  Custom profile for Brian Stark of BStarkIT
-
- .NOTES
-  Script written by Brian Stark of BStarkIT 
-
-  .DESCRIPTION
-  written by BStark
-
- .LINK
-  Scripts can be found at:
-  https://github.com/BStarkIT
-
-#>
 Clear-Host
 $env:PSModulePath = $Env:PSModulePath+";C:\PS\PSModules\"
 New-Alias -Name tray -value C:\PS\Public\Tray.ps1
