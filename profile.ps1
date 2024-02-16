@@ -1,6 +1,5 @@
 Clear-Host
 $env:PSModulePath = $Env:PSModulePath+";C:\PS\PSModules\"
-New-Alias -Name tray -value C:\PS\Public\Tray.ps1
 Set-Alias -Name np -Value "C:\Program Files\Notepad++\notepad++.exe"
 $Major = ((Get-Variable PSVersionTable -ValueOnly).PSVersion).Major
 $Minor = ((Get-Variable PSVersionTable -ValueOnly).PSVersion).Minor
