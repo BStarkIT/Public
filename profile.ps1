@@ -1,6 +1,18 @@
 Clear-Host
 $env:PSModulePath = $Env:PSModulePath+";C:\PS\PSModules\"
 Set-Alias -Name np -Value "C:\Program Files\Notepad++\notepad++.exe"
+Set-Alias -Name AP -Vlaue Approve-lang
+function Per { Set-Location C:\PS }
+function dev { Set-Location C:\Code }
+function Git-Whoami {
+    $author = git config user.name
+    $email = git config user.email
+    
+    [pscustomobject]@{
+        Author = $author
+        Email = $email
+    }
+}
 $Major = ((Get-Variable PSVersionTable -ValueOnly).PSVersion).Major
 $Minor = ((Get-Variable PSVersionTable -ValueOnly).PSVersion).Minor
 $Patch = ((Get-Variable PSVersionTable -ValueOnly).PSVersion).Patch
