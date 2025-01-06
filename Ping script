@@ -1,0 +1,1 @@
+Start-Process powershell -WindowStyle Maximized -ArgumentList ("-ExecutionPolicy Bypass -noninteractive -noprofile "), "-command ping -t 8.8.8.8|Foreach{'{0} - {1}' -f (Get-Date),$_} > C:\PS\Reports\ping_log.txt"
