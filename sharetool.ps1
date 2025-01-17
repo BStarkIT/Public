@@ -35,7 +35,7 @@ else {
 }
 #add permissions to folder
 $acl = Get-Acl -Path $path
-$ace = New-Object System.Security.Accesscontrol.FileSystemAccessRule ("testuser", "Read", "Allow")
+$ace = New-Object System.Security.Accesscontrol.FileSystemAccessRule ($user , "FullControl", "Allow")
 $acl.AddAccessRule($ace)
 Set-Acl -Path $path -AclObject $acl
 #share setup
